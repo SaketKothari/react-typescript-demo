@@ -1,13 +1,9 @@
-const CourseGoal = (
-  // Destructuring
-  {
-    title,
-    description,
-  }: {
-    title: string;
-    description: string;
-  }
-) => {
+type CourseGoalProps = {
+  title: string;
+  description: string;
+};
+
+const CourseGoal = ({ title, description }: CourseGoalProps) => {
   return (
     <article>
       <div>
