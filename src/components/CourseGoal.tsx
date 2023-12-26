@@ -1,14 +1,16 @@
+import { type ReactNode } from 'react';
+
 type CourseGoalProps = {
   title: string;
-  description: string;
+  children: ReactNode;
 };
 
-const CourseGoal = ({ title, description }: CourseGoalProps) => {
+const CourseGoal = ({ title, children }: CourseGoalProps) => {
   return (
     <article>
       <div>
         <h2>{title}</h2>
-        <p>{description}</p>
+        {children}
       </div>
       <button>Delete</button>
     </article>
