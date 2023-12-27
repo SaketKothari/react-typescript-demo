@@ -14,11 +14,11 @@ export type CourseGoal = {
 const App = () => {
   const [goals, setGoals] = useState<CourseGoal[]>([]);
 
-  function handleAddClick() {
+  function handleAddClick(goal: string, summary: string) {
     setGoals((prevGoals) => {
       const newGoal: CourseGoal = {
-        title: 'Learn React + TS',
-        description: 'Learn from the ground up',
+        title: goal,
+        description: summary,
         id: Math.random(),
       };
       return [...prevGoals, newGoal];
@@ -34,7 +34,7 @@ const App = () => {
       <Header image={{ src: goalImg, alt: 'A list of goals' }}>
         <h1>Your Course Goals</h1>
       </Header>
-      <AddGoalForm />
+      <AddGoalForm onAddClick={handleAddClick} />
 
       <CourseGoalList goals={goals} onDeleteHandler={handleDeleteClick} />
     </main>
