@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import goalImg from './assets/goals.jpg';
 
+import AddGoalForm from './components/AddGoalForm';
 import CourseGoalList from './components/CourseGoalList';
 import Header from './components/Header';
 
@@ -33,7 +34,7 @@ const App = () => {
       <Header image={{ src: goalImg, alt: 'A list of goals' }}>
         <h1>Your Course Goals</h1>
       </Header>
-      <button onClick={handleAddClick}>Add Goal</button>
+      <AddGoalForm />
 
       <CourseGoalList goals={goals} onDeleteHandler={handleDeleteClick} />
     </main>
