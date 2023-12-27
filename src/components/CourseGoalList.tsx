@@ -4,6 +4,7 @@ import CourseGoal from './CourseGoal';
 
 type CourseGoalListProps = {
   goals: CGoal[];
+  onDeleteHandler: (id: number) => void;
 };
 
 const CourseGoalList = (props: CourseGoalListProps) => {
@@ -12,7 +13,7 @@ const CourseGoalList = (props: CourseGoalListProps) => {
       <ul>
         {props.goals.map((goal) => (
           <li key={goal.id}>
-            <CourseGoal title={goal.title}>
+            <CourseGoal id={goal.id} title={goal.title} onDelete={props.onDeleteHandler}>
               <p>{goal.description}</p>
             </CourseGoal>
           </li>
