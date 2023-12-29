@@ -8,10 +8,10 @@ function App() {
       <Input id="age" label="Your age" type="number" />
 
       <p>
-        <Button element="button">Button</Button>
+        <Button>Button</Button>
       </p>
       <p>
-        <Button element="anchor" href="https://google.com" target="_blank">
+        <Button href="https://google.com" target="_blank">
           A Link
         </Button>
       </p>
