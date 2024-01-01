@@ -4,7 +4,9 @@ import Container from './components/Container';
 function App() {
   return (
     <main>
-      <Container as={Button} />
+      <Container as={Button} onClick={() => console.log('Clicked')}>
+        Click me
+      </Container>
     </main>
   );
 }
