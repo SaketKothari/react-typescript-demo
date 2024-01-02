@@ -3,9 +3,14 @@ import Input from './components/Input';
 import Form from './components/Form';
 
 function App() {
+  function handleSave(data: unknown) {
+    const extractedData = data as { name: string; age: string };
+    console.log(extractedData);
+  }
+
   return (
     <main>
-      <Form>
+      <Form onSave={handleSave}>
         <Input id="name" type="text" label="Name" />
         <Input id="age" type="number" label="Age" />
         <p>
